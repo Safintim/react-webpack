@@ -1,0 +1,28 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true 
+  },
+  "plugins": [
+    "react", 
+    "prettier",
+    "react-hooks"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "react/prop-types": 0
+}
+}

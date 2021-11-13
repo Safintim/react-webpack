@@ -1,0 +1,19 @@
+version: "3.7"
+
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ~/.zsh_history:/root/.bash_history
+      - .:/app:cached
+      - notused:/app/node_modules
+    ports:
+      - "4000:4000"
+    command: npm start
+    stdin_open: true
+    tty: true
+volumes:
+  notused:
